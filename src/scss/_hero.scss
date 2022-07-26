@@ -1,0 +1,108 @@
+.hero {
+    padding-bottom: 110px;
+}
+.hero__picture {
+}
+.hero__img {
+    max-width: 1175px;
+    width: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 76px;
+    right: -287px;
+    z-index: -1;
+}
+
+.hero__title {
+  padding-top: 100px;
+  max-width: 387px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 62px;
+  color: $colorMain;
+}
+.hero__text {
+  margin-top: 15px;
+  max-width: 530px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: $colorSecondaryLight;
+}
+.hero__buttons {
+  display: flex;
+  gap: 19px;
+  margin-top: 62px;
+}
+.hero__button {
+  display: inline-flex;
+  justify-content: center;
+  gap: 7px;
+  align-items: center;
+  width: 144px;
+  height: 40px;
+  background-color: $colorNeutral;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  color: $colorWhite;
+  &:hover {
+    background-color: #4177ff;
+    transition: .3s all ease;
+    svg {
+      transform: translate(5px, -5px);
+      transition: .3s all ease;
+    }
+  }
+}
+.hero__button--outline {
+  background-color: $colorWhite;
+  outline: solid 1px #ffffff;
+  color: $colorNeutral;
+  &:hover {
+    background-color: $colorWhite;
+    outline: solid 1px #4177ff;
+    transition: outline .3s linear;
+  }
+}
+.hero__info {
+  margin-top: 130px;
+}
+.hero__subtitle {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: $colorSecondaryLight;
+}
+.hero__stats {
+  margin-top: 25px;
+  display: flex;
+  gap: 80px;
+}
+.hero__stat-num {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+  color: $colorMain;
+}
+.hero__stat-text {
+  margin-top: 12px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $colorSecondary;
+}
