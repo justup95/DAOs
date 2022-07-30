@@ -114,7 +114,7 @@ body {
 }
 
 body.locked {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 @-webkit-keyframes fade {
@@ -174,7 +174,22 @@ nav {
   gap: 50px;
 }
 
+.menu__item {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .menu__item-link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 8px;
   color: #5E5C6C;
   font-style: normal;
@@ -228,16 +243,17 @@ nav {
 
 .hero {
   padding-bottom: 110px;
+  position: relative;
 }
 
 .hero__img {
-  max-width: 1175px;
   width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  max-width: 880px;
+  -o-object-fit: cover;
+     object-fit: cover;
   position: absolute;
-  top: 76px;
-  right: -287px;
+  top: 0;
+  right: 0;
   z-index: -1;
 }
 
@@ -265,6 +281,8 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 19px;
   margin-top: 62px;
 }
@@ -372,9 +390,56 @@ nav {
   color: #5E5C6C;
 }
 
+@media (max-width: 1199.98px) {
+  .hero__img {
+    max-width: 600px;
+  }
+
+  .hero__title {
+    padding-top: 75px;
+  }
+
+  .hero__info {
+    margin-top: 75px;
+  }
+}
+
 @media (max-width: 991.98px) {
   .container {
     max-width: 970px;
+  }
+
+  .hero {
+    padding-bottom: 400px;
+  }
+
+  .hero__img {
+    top: unset;
+    bottom: 0;
+  }
+
+  .hero__title {
+    padding-top: 50px;
+    font-size: 32px;
+    line-height: 120%;
+    max-width: 100%;
+  }
+
+  .hero__text {
+    max-width: 100%;
+  }
+
+  .hero__info {
+    margin-top: 50px;
+  }
+
+  .hero__stats {
+    gap: 50px;
+  }
+
+  .hero__stat-num {
+    font-size: 24px;
+    line-height: 100%;
   }
 }
 
@@ -403,6 +468,10 @@ nav {
     padding: 0;
     background-color: none;
     border-radius: 0;
+  }
+
+  .hero {
+    padding-bottom: 350px;
   }
 }
 
@@ -525,5 +594,30 @@ nav {
 @media (max-width: 479.98px) {
   .container {
     max-width: none;
+  }
+
+  .hero__img {
+    bottom: 40px;
+  }
+
+  .hero__buttons {
+    margin-top: 50px;
+  }
+
+  .hero__button {
+    width: 100%;
+  }
+
+  .hero__stats {
+    gap: 25px;
+  }
+
+  .hero__stat-num {
+    font-size: 22px;
+  }
+
+  .hero__stat-text {
+    margin-top: 5px;
+    font-size: 12px;
   }
 }

@@ -1,16 +1,35 @@
 .hero {
     padding-bottom: 110px;
+    position: relative;
+    @media (max-width: $breakpoint992) {
+      padding-bottom: 400px;
+    }
+    @media (max-width: $breakpoint768) {
+      padding-bottom: 350px;
+    }
 }
+
 .hero__picture {
+    
 }
 .hero__img {
-    max-width: 1175px;
     width: 100%;
-    object-fit: contain;
+    max-width: 880px;
+    object-fit: cover;
     position: absolute;
-    top: 76px;
-    right: -287px;
+    top: 0;
+    right: 0;
     z-index: -1;
+    @media (max-width: $breakpoint1200) {
+      max-width: 600px;
+    }
+    @media (max-width: $breakpoint992) {
+      top: unset;
+      bottom: 0;
+    }
+    @media (max-width: $breakpoint480) {
+      bottom: 40px;
+    }
 }
 
 .hero__title {
@@ -21,6 +40,15 @@
   font-size: 48px;
   line-height: 62px;
   color: $colorMain;
+  @media (max-width: $breakpoint1200) {
+    padding-top: 75px;
+  }
+  @media (max-width: $breakpoint992) {
+    padding-top: 50px;
+    font-size: 32px;
+    line-height: 120%;
+    max-width: 100%;
+  }
 }
 .hero__text {
   margin-top: 15px;
@@ -30,11 +58,18 @@
   font-size: 14px;
   line-height: 24px;
   color: $colorSecondaryLight;
+  @media (max-width: $breakpoint992) {
+    max-width: 100%;
+  }
 }
 .hero__buttons {
   display: flex;
+  flex-wrap: wrap;
   gap: 19px;
   margin-top: 62px;
+  @media (max-width: $breakpoint480) {
+    margin-top: 50px;
+  }
 }
 .hero__button {
   display: inline-flex;
@@ -58,6 +93,9 @@
       transition: .3s all ease;
     }
   }
+  @media (max-width: $breakpoint480) {
+    width: 100%;
+  }
 }
 .hero__button--outline {
   background-color: $colorWhite;
@@ -71,6 +109,12 @@
 }
 .hero__info {
   margin-top: 130px;
+  @media (max-width: $breakpoint1200) {
+    margin-top: 75px;
+  }
+  @media (max-width: $breakpoint992) {
+    margin-top: 50px;
+  }
 }
 .hero__subtitle {
   font-style: normal;
@@ -84,6 +128,12 @@
   margin-top: 25px;
   display: flex;
   gap: 80px;
+  @media (max-width: $breakpoint992) {
+    gap: 50px;
+  }
+  @media (max-width: $breakpoint480) {
+    gap: 25px;
+  }
 }
 .hero__stat-num {
   display: flex;
@@ -95,6 +145,13 @@
   line-height: 36px;
   text-align: center;
   color: $colorMain;
+  @media (max-width: $breakpoint992) {
+    font-size: 24px;
+    line-height: 100%;
+  }
+  @media (max-width: $breakpoint480) {
+    font-size: 22px;
+  }
 }
 .hero__stat-text {
   margin-top: 12px;
@@ -105,4 +162,8 @@
   text-align: center;
   text-transform: uppercase;
   color: $colorSecondary;
+  @media (max-width: $breakpoint480) {
+    margin-top: 5px;
+    font-size: 12px;
+  }
 }

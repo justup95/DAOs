@@ -29,6 +29,8 @@ nav {
   gap: 50px;
   // .menu__item
   &__item {
+    display: inline-flex;
+    align-items: center;
   }
 
   @media (max-width: $breakpoint768) {
@@ -38,6 +40,8 @@ nav {
 
   // .menu__item-link
   &__item-link {
+    display: inline-flex;
+    align-items: center;
     gap: 8px;
     color: $colorSecondary;
     font-style: normal;
